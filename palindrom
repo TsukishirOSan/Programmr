@@ -1,0 +1,42 @@
+import java.io.*;  
+  
+public class PalindromString  
+{  
+	public static void main(String a[]) throws Exception  
+	{  
+           String strn;  
+           int flag=0;  
+           System.out.println("Enter the string:");  
+           BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
+           strn=br.readLine();  
+           System.out.println("Result string is:");  
+           //write your logic here  
+               int len = strn.length();
+               int i = 0;
+               int j = len - 1;
+               //System.out.println(j);
+                while(i < len/2){
+                    char cur = strn.charAt(i);
+                    char cur2 = strn.charAt(j);
+                    if(cur != cur2){
+                        break;
+                   }
+                i++;
+                j--;   
+               }
+               if( i >= len/2){
+                   flag = 1;
+               }        
+  
+  
+  
+  
+  
+           //end  
+           if(flag==1)  
+               System.out.print("palindrome");  
+           else   
+               System.out.print("not a palindrome");  
+  
+        }  
+}  
